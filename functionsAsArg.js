@@ -1,6 +1,12 @@
-function filter() {
-    // TASK: Define your function here
+function filter(arr, fn) {
+ newArray = [];
+ for(let i=0; i<arr.length; i++){
+     if (fn(arr[i])===true){
+         newArray.push(arr[i]);
+     }
+ } return newArray;
 }
+
 
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
@@ -16,3 +22,4 @@ const filteredNames = filter(myNames, function(name) {
 
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+console.log(filter(myNames,fn));
