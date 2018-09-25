@@ -9,4 +9,9 @@ let addition = noNeg.map(function(array){
     return array[0] + array[1];
 })
 
-console.log(addition);
+counter = 0;
+addition.forEach(function(element){
+    counter += element;
+})
+
+console.log(counter);
