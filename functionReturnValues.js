@@ -15,3 +15,16 @@ for(let i = 0; i < 3; i++){
     console.log(warning(locationArray[i]));
     console.log(warning(locationArray[i]));
 }
+
+
+
+let turtleSteps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let noNeg = turtleSteps.filter(function(arr){
+    if (arr[0]>=0 && arr[1]>=0){
+        return arr;
+    } 
+})
+
+let sums = noNeg.map(function(){arr[0][0] + arr[0][1]});
+
+console.log(sums);
