@@ -3,8 +3,10 @@ function filter(arr, fn) {
  for(let i=0; i<arr.length; i++){
      if (fn(arr[i])===true){
          newArray.push(arr[i]);
+         console.log("pushed :"+ arr[i]);
      }
- } return newArray;
+ } 
+    return newArray;
 }
 
 
@@ -22,4 +24,6 @@ const filteredNames = filter(myNames, function(name) {
 
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
-console.log(filter(myNames,fn));
+console.log(filter(myNames, function(name){
+    return name[0] === 'B';
+}));
